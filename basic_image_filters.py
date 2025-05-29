@@ -1,12 +1,12 @@
 import cv2
 
 # Load the image
-image_path = r"P:\Computer vision Experiments\Sample images\noisy.png"
+image_path = r"P:\Computer vision Experiments\Sample images\image6.jpg"
 image = cv2.imread(image_path)
 
 # Resizing the image for fitting into the window
 h, w = image.shape[:2]
-resize_fac = 1.6
+resize_fac = 0.7
 image = cv2.resize(image, (int(w*resize_fac), int(h*resize_fac)))
 
 # Convert to grayscale
@@ -28,7 +28,7 @@ medBlur = cv2.medianBlur(image,5)
 cv2.imshow('Media Blurring', medBlur)
 
 # Bilateral Filtering
-bilFilter = cv2.bilateralFilter(image,3,75,75)
+bilFilter = cv2.bilateralFilter(image,21,75,75)
 cv2.imshow('Bilateral Filtering', bilFilter)
 
 # ----------------------------------------------------------------------
