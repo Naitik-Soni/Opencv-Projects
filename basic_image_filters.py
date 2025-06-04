@@ -27,6 +27,8 @@ cv2.imshow('Gaussian Blurring', gausBlur)
 medBlur = cv2.medianBlur(image,5)
 cv2.imshow('Media Blurring', medBlur)
 
+cv2.imwrite("nde_lena.png", medBlur)
+
 # Bilateral Filtering
 bilFilter = cv2.bilateralFilter(image,21,75,75)
 cv2.imshow('Bilateral Filtering', bilFilter)
