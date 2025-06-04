@@ -1,12 +1,12 @@
 import cv2
 
 # Load the image
-image_path = r"P:\Computer vision Experiments\Sample images\image6.jpg"
+image_path = r"P:\Computer vision Experiments\Sample images\lena.png"
 image = cv2.imread(image_path)
 
 # Resizing the image for fitting into the window
 h, w = image.shape[:2]
-resize_fac = 0.7
+resize_fac = 1.2
 image = cv2.resize(image, (int(w*resize_fac), int(h*resize_fac)))
 
 # Convert to grayscale
